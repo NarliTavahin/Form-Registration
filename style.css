@@ -1,0 +1,297 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: url("./bg.png"), -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
+  }
+
+ Form {
+    margin: 0 0;
+    padding: 5px 10px; 
+    /* width: 70%; */
+    min-width: 300px;
+  }
+
+  
+label {
+    font-weight: 600;
+    color: #666;
+}
+
+ .container {
+     box-shadow: 0 0 10px 5px;
+     width: 777px !important;
+     background: #fff;
+     text-align: center;
+     border-radius: 5px;
+     padding: 50px 35px 10px 35px;
+
+} 
+
+
+.each-sec {
+    width: 700px !important;
+    height: auto;
+    background-color: rgb(211, 208, 208);
+    padding: 10px 33px;
+    margin: 0 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px;
+}
+
+.txtarea {
+    padding: 12px 20px;
+     font-size: 13px;
+    min-height: 212px;
+    width: 100%;
+}
+
+
+
+/* ---------------------------------------------------Captcha-------------- */
+
+.input_field {
+    position: relative;
+    height: 45px;
+    margin-top: 15px;
+    width: 18%;
+}
+
+.refresh_button {
+    position: absolute;
+    top: 50%;
+    left: 103%;
+    transform: translateY(-50%);
+    background: #826afb;
+    height: 30px;
+    width: 30px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 0 5px !important;
+    cursor: pointer;
+}
+
+.refresh_button:active {
+    transform: translateY(-50%) scale(0.98);
+}
+
+.input_field input,
+.button button {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+}
+
+.input_field input {
+    padding: 0 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.captcha_box input {
+    color: #6b6b6b;
+    font-size: 22px;
+    pointer-events: none;
+}
+
+.captcha_input input:focus {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+/* --------------------------------Multi steps---------------------- */
+::selection{
+    color: #fff;
+    background: #d43f8d;
+  }
+
+   .form-outer{
+    margin: 0 -22px;
+    width: 108%;
+    overflow: hidden;
+  }
+form{
+    display: flex;
+    width: 400%;
+  }
+  .page{
+    width: 25%;
+    transition: margin-left 0.3s ease-in-out;
+  }
+  .form-outer form .page .title{
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+  }
+  .form-outer form .page .field{
+    width: 330px;
+    height: 45px;
+    margin: 45px 0;
+    display: flex;
+    position: relative;
+  }
+  form .page .field .label{
+    position: absolute;
+    top: -30px;
+    font-weight: 500;
+  }
+  form .page .field input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 18px;
+  }
+  form .page .field select{
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  form .page .field button{
+    width: 100%;
+    height: calc(100% + 5px);
+    border: none;
+    background: #d33f8d;
+    margin-top: -20px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+  }
+  form .page .field button:hover{
+    background: #000;
+  }
+  form .page .btns button{
+    margin-top: -20px!important;
+  }
+  form .page .btns button.prev{
+    margin-right: 3px;
+    font-size: 17px;
+  }
+  form .page .btns button.next{
+    margin-left: 3px;
+  }
+  .container .progress--bar{
+    display: flex;
+    margin: 40px 0;
+    user-select: none;
+  }
+  .container .progress--bar .step{
+    text-align: center;
+    width: 100%;
+    position: relative;
+  }
+  .container .progress--bar .step p{
+    font-weight: 500;
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 8px;
+  }
+  .progress--bar .step .bullet{
+    height: 25px;
+    width: 25px;
+    border: 2px solid #000;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.2s;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+  }
+  .progress--bar .step .bullet.active{
+    border-color: #d43f8d;
+    background: #d43f8d;
+  }
+  .progress--bar .step .bullet span{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .progress--bar .step .bullet.active span{
+    display: none;
+  }
+  .progress--bar .step .bullet:before,
+  .progress--bar .step .bullet:after{
+    position: absolute;
+    content: '';
+    bottom: 11px;
+    right: -51px;
+    height: 3px;
+    width: 44px;
+    background: #262626;
+  }
+  .progress--bar .step .bullet.active:after{
+    background: #d43f8d;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 0.3s linear forwards;
+  }
+  @keyframes animate {
+    100%{
+      transform: scaleX(1);
+    }
+  }
+  .progress--bar .step:last-child .bullet:before,
+  .progress--bar .step:last-child .bullet:after{
+    display: none;
+  }
+  .progress--bar .step p.active{
+    color: #d43f8d;
+    transition: 0.2s linear;
+  }
+  .progress--bar .step .check{
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+  .progress--bar .step .check.active{
+    display: block;
+    color: #fff;
+  }
+  
+
+
+  /* --------------------------------Countries List---------------------- */
+
+
+.container-countries .select_option select{
+  padding: 10px;
+  box-shadow: none !important;
+  cursor: pointer;
+  font-size: 20px;
+  border: none;
+  border: 2px solid #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-countries .select_option select:first-child{
+  border-color: #1D5B79;
+}
+
+.container-countries .select_option select:nth-child(2){
+  margin: 20px 0;
+  border-color: #1881d5;
+}
+
+.container-countries .select_option select:last-child{
+  border-color: #0b9ed0;
+}
